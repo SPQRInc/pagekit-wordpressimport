@@ -1,0 +1,22 @@
+{
+  "name": "spqr/wordpressimport",
+  "module": "spqr/wordpressimport",
+  "version": "0.9.0",
+  "type": "pagekit-extension",
+  "title": "WordPress Import",
+  "description": "Allows you to import your WordPress-blog.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Roman Lossin-Beßler",
+      "homepage": "https://spqr.wtf"
+    }
+  ],
+  "extra": {
+    "icon": "icon.svg",
+    "scripts": "scripts.php"
+  },
+  "require": {
+    "sunra/php-simple-html-dom-parser": "1.5.2"
+  }
+}
