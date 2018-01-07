@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'Importing'                        => 'Importiere',
+    'WordPress XML Import'             => 'WordPress XML-Import',
+    'Upload'                           => 'Hochladen',
+    'Successfully imported.'           => 'Erfolgreich importiert.',
+    'Close'                            => 'Schließen',
+    'XML Upload'                       => 'XML-Upload',
+    'Save'                             => 'Speichern',
+    'File'                             => 'Datei',
+    'Import Settings'                  => 'Import-Einstellungen',
+    'No file uploaded.'                => 'Es wurde keine Datei hochgeladen.',
+    'Please upload a valid xml file.'  => 'Bitte lade eine gültige XML-Datei hoch.',
+    'Preparing.'                       => 'Bereite vor.',
+    'Blog extension is not installed.' => 'Blog-Erweiterung konnte nicht gefunden werden.',
+    'Simplexml is not installed.'      => 'Simplexml ist nicht installiert.',
+    'No file given.'                   => 'Es wurde keine Datei übermittelt.',
+    'File can not be found.'           => 'Datei konnte nicht gefunden werden.',
+    'Importing.'                       => 'Importiere.',
+    'Importing attachment %id%.'       => 'Importiere Anhang %id%.',
+    'Importing blog post %id%.'        => 'Importiere Blog-Beitrag %id%.',
+    'Cleaning up.'                     => 'Räume auf.',
+    'Deleted temp file.'               => 'Temporäre Datei gelöscht.',
+    'Unable to delete temp file.'      => 'Konnte temporäre Datei nicht löschen.',
+];
