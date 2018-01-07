@@ -5,7 +5,6 @@ namespace Spqr\Wordpressimport\Controller;
 use Pagekit\Application as App;
 use Spqr\Wordpressimport\Import\ImportManager;
 
-
 /**
  * @Access(admin=true)
  * @return string
@@ -77,7 +76,6 @@ class WordpressimportController
     
         return compact('file');
     }
-    
     
     /**
      * @Request({"file": "array"}, csrf=true)

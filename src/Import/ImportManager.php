@@ -8,7 +8,6 @@ use Pagekit\Blog\Model\Comment;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Output\StreamOutput;
 
-
 /**
  * Class ImportManager
  *

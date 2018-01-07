@@ -2,7 +2,6 @@
 
 namespace Spqr\Wordpressimport\Post;
 
-
 /**
  * Class WordpressPost
  *
