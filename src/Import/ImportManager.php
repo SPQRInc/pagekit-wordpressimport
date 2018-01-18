@@ -133,16 +133,21 @@ class ImportManager
                     'comment_status' => $wp_post->comments_enabled,
                 ]);
                 
-                $thumb = $this->attachments->get($wp_post->thumbnail);
-                
                 $post->save(); // Todo: Is this necessary?
                 $post->set('title',
                     App::module('blog')->config('posts.show_title'));
                 $post->set('markdown', false);
-                $post->set('image', [
-                    'src' => $thumb->path,
-                    'alt' => $thumb->title,
-                ]);
+                
+                if (!empty($wp_post->thumbnail)
+                    && is_int($wp_post->thumbnail)
+                ) {
+                    $thumb = $this->attachments->get($wp_post->thumbnail);
+                    $post->set('image', [
+                        'src' => $thumb->path,
+                        'alt' => $thumb->title,
+                    ]);
+                    
+                }
                 
                 $post->save();
                 
