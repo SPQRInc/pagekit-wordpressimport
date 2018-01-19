@@ -229,7 +229,6 @@ class PostManager
      */
     public function replaceImages($content, $attachments)
     {
-        
         if (!empty($content)) {
             $dom = HtmlDomParser::str_get_html($content, true, true,
                 DEFAULT_TARGET_CHARSET, false, DEFAULT_BR_TEXT,
