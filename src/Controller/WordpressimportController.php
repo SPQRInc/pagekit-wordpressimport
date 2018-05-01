@@ -65,10 +65,6 @@ class WordpressimportController
             App::abort(400,
                 __('Please upload a valid xml file.'));
         }
-        if ($upload->getMimeType() != 'application/xml') {
-            App::abort(400,
-                __('Please upload a valid xml file. Mime Type: '));
-        }
         
         $upload->move($path, $filename);
         

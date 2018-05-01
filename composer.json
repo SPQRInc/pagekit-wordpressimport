@@ -1,7 +1,7 @@
 {
   "name": "spqr/wordpressimport",
   "module": "spqr/wordpressimport",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "pagekit-extension",
   "title": "WordPress Import",
   "description": "Allows you to import WordPress blog posts, comments and attachments.",
