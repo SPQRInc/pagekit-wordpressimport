@@ -49,7 +49,7 @@ class WordpressimportController
     public function uploadAction()
     {
         $upload = App::request()->files->get('file');
-        $hash = substr(sha1(App::module('system')->config('secret').rand(0,
+        $hash   = substr(sha1(App::module('system')->config('secret').rand(0,
                 9999).date_format(new \DateTime(), 'd/m/Y H:i:s')), 0, 20);
         
         $filename = 'import-'.$hash.'.xml';
@@ -59,21 +59,21 @@ class WordpressimportController
             App::abort(400, __('No file uploaded.'));
         }
         
-        if ((!empty($upload->getExtension()) && $upload->getExtension() != 'xml')
-            || (!empty($upload->guessExtension())
-                && $upload->guessExtension() != 'xml')
+        if (!empty($upload->guessExtension())
+            && $upload->guessExtension() != 'xml'
         ) {
-            App::abort(400, __('Please upload a valid xml file.'));
+            App::abort(400,
+                __('Please upload a valid xml file.'));
+        }
+        if ($upload->getMimeType() != 'application/xml') {
+            App::abort(400,
+                __('Please upload a valid xml file. Mime Type: '));
         }
         
-        if ($upload->getMimeType() != 'application/xml') {
-            App::abort(400, __('Please upload a valid xml file.'));
-        }
-    
         $upload->move($path, $filename);
-    
-        $file = ['path' => $path, 'filename' => $filename ];
-    
+        
+        $file = ['path' => $path, 'filename' => $filename];
+        
         return compact('file');
     }
     
@@ -93,6 +93,5 @@ class WordpressimportController
             }
         });
     }
-    
     
 }
